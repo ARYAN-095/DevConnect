@@ -2,7 +2,7 @@ import React from 'react'
 
 import Logo from './assets/Logo.jpeg'
 
-const Navigation = () => {
+const Navbar = () => {
   return (
     <div className="navbar bg-base-100 shadow-sm flex justify-between bg-yellow-400">
       
@@ -49,4 +49,4 @@ const Navigation = () => {
   )
 }
 
-export default Navigation
+export default Navbar
