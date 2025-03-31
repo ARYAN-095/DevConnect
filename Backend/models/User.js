@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 
 
 const userSchema = mongoose.Schema({
-    fistName:{
+    firstName:{
         type: String,
         required:true,
         minLength:4,
@@ -50,6 +50,17 @@ const userSchema = mongoose.Schema({
         timestamps:true,
     }
 )
+
+
+userSchema.methods.getJWT=async function(){
+    const user=this;
+
+   const token= await jwt.sign({_id:user._id},"123@34",{
+    expiresIn:"7d",
+   })
+
+   return token;
+}
 
  
 module.exports=mongoose.model("User", userSchema);
