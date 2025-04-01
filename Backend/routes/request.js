@@ -46,11 +46,7 @@ requestRouter.post("/request/send/:status/:toUserId",userAuth,async (req,res)=>{
         const data= await connectionRequest.save();
 
 
-        if(data){
-            res.status(401).send({message:"Connection sends succesfully"})
-        }else{
-            throw new Error(err);
-        }
+       res.json({message:"Connection request "+ status, data});
 
     //    const emailRes=await sendEmail.run(
     //         "A new Friend request from" + req.user.firstName,
