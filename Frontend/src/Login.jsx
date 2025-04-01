@@ -40,14 +40,14 @@ const Login = () => {
    
 </fieldset>
 
-<fieldset className="fieldset ">
+<fieldset className="fieldset">
   <legend className="fieldset-legend pt-8 text-[17px] ">Password: </legend>
   <input type="text" className="input " placeholder="
   Enter Password" value={password} onChange={(e)=>setPassword(e.target.value)} />
    
 </fieldset>
      
-    <div className=" flex justify-center py-4">
+    <div className=" flex justify-center py-4 ">
       <button className="btn btn-primary" onClick={handelLogin}>Login</button>
     </div>
   </div>

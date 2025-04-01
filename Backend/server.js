@@ -4,6 +4,7 @@ const connectDB=require('./config/Database.js');
  
 const authRouter=require("./routes/auth.js");
 const cookieParser = require('cookie-parser');
+const requestRouter=require("./routes/request.js")
 
 const cors= require('cors');
 
@@ -22,6 +23,7 @@ app.use(cookieParser());
  
 
 app.use("/", authRouter);
+app.use("/",requestRouter);
 
 
 
