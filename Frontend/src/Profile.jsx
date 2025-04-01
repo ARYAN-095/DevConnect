@@ -2,7 +2,7 @@ import React from 'react'
 
 const profile = () => {
   return (
-    <div>profile</div>
+    <div className="text-2xl">profile</div>
   )
 }
 
