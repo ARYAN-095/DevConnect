@@ -5,7 +5,7 @@ import { useState } from 'react'
 const Login = () => {
 
     const [emailId, setEmailId]= useState("aryan123@gmail.com");
-    const [password, setPassword]= useState("Ar@1234");
+    const [password, setPassword]= useState("Ar@9621666865");
 
 
     const handelLogin=async ()=>{
@@ -15,7 +15,10 @@ const Login = () => {
         const res= await axios.post("http://localhost:5000/login",{
             emailId,
             password,
-          });
+          },
+          {withCredentials: true}
+        
+        );
 
        }catch(err){
             
@@ -27,7 +30,7 @@ const Login = () => {
 
   return (
  
-    <div className="flex justify-center pt-25">
+    <div className='flex justify-center pt-25'>
 
 <div className= "bg-blue-100 w-96 shadow-sm pl-2 ">
   <div>
