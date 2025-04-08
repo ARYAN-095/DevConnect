@@ -5,8 +5,13 @@ import { Outlet } from 'react-router-dom'
 
 const Body = () => {
   return (
-    <div>
+    <div  >
+    
     <Navbar/>
+         
+          
+         
+
     <Outlet/>
     
     </div>

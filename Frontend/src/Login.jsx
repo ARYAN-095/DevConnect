@@ -1,11 +1,19 @@
 import React from 'react'
 import axios from 'axios'
 import { useState } from 'react'
+import { useDispatch } from 'react-redux';
+import { addUser } from './utils/userSlice';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
 
+   const navigate = useNavigate();
+
     const [emailId, setEmailId]= useState("aryan123@gmail.com");
     const [password, setPassword]= useState("Ar@9621666865");
+
+    const dispatch=useDispatch();
+     
 
 
     const handelLogin=async ()=>{
@@ -19,6 +27,10 @@ const Login = () => {
           {withCredentials: true}
         
         );
+
+       // console.log(res.data);
+        dispatch(addUser(res.data));
+        navigate("/")
 
        }catch(err){
             
